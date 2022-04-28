@@ -1,0 +1,17 @@
+[
+  {"name":"Santa Teresa","image":"https://saralazaro.com/wp-content/uploads/2017/03/fotografos-boda-menorca-sara-lazaro-030.jpg","region":"Camino del Faro de Cavalleria","type":"Wedding","latitude":40.06575910726182,"longitude":4.088528083763209},
+  {"name":"Platges de Fornells","image":"https://a0.muscache.com/im/pictures/cb81806a-ed62-4c6d-a554-a7deedac5832.jpg","region":"Fornells","type":"Accomodation","latitude":40.04748690211651,"longitude":4.110263531189743},
+  {"name":"Menorca Airport","image":"https://simpleway.global/files/Airport%20generic%202%20cut%20(3).jpg","region":"Mahon","type":"Port","latitude":39.86510328411125,"longitude":4.2254971549202445},
+  {"name":"Ciutadella Port","image":"https://lngprime.com/wp-content/uploads/2021/06/Axpo-Balearia-team-up-on-emission-free-ferry-crossing.jpg","region":"Ciutadella","type":"Port","latitude":39.98827992223205,"longitude":3.8302438144575737},
+  {"name":"Binidali Beach Bar","image":"https://lh5.googleusercontent.com/p/AF1QipMtrkc1GbUPXPOQMbAsaVwOKk12j2whef3P9yVV=w408-h306-k-no","region":"Binisafuller","type":"Bar","latitude":39.83456745678929,"longitude":4.197042722388438},
+  {"name":"Los Bucaneros Chiringuito","image":"https://media-cdn.tripadvisor.com/media/photo-s/06/25/27/58/bucaneros-binibequer.jpg","region":"Binibeca","type":"Bar","latitude":39.816498118329825,"longitude":4.240408844963013, "website":"https://bucanerosmenorca.com/"},
+  {"name":"Cala Mitjana","image":"https://www.westend61.de/images/0001236336pw/view-of-cala-mitjana-menorca-balearic-islands-spain-mediterranean-europe-RHPLF02362.jpg","region":"Binibeca","type":"Beach","latitude":39.93441795900364,"longitude":3.9723830719615374},
+  {"name":"Cape Cavalleria Lighthouse","image":"https://c8.alamy.com/zooms/9/0c2faaca69134d4baff416480954b52b/rm3f0n.jpg","region":"Binibeca","type":"Landmark","latitude":40.089149796431926,"longitude":4.092386240265364},
+  {"name":"Hotel Jeni","image":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/261184968.jpg?k=4d516729ccd90f732941ffe55157a5692e17f8d27cef42880299242f30f3bdf7&o=&hp=1","region":"Binibeca","type":"Accomodation","latitude":39.98616938213189,"longitude":4.094974201728236},
+
+  {"name":"Cova d'en Xoroi","image":"https://www.ferrerhotels.com/travellost/wp-content/uploads/2018/12/CovadenXoroi2.jpg","region":"Cala en Porter","type":"Bar","latitude":39.86640297521522,"longitude":4.132897341344927},
+
+  {"name":"I'm on a yacht!","image":"https://www.ferrerhotels.com/travellost/wp-content/uploads/2018/12/CovadenXoroi2.jpg","region":"Cala en Porter","type":"Bar","latitude":39.86640297521522,"longitude":4.132897341344927},
+
+  {"name":"Hire a Charter Yacht!","image":"https://www.charteranddreams.com/media/articles/noticias/trabucaire-116.jpg","region":"Menorca","type":"Beach","latitude":40.08450732796644,"longitude":4.0354074539945906}
+]
