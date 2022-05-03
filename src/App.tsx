@@ -1,4 +1,5 @@
 import '@fontsource/roboto';
+import '@fontsource/square-peg';
 import * as React from 'react';
 import { useState, useMemo } from 'react';
 import { render } from 'react-dom';
@@ -19,16 +20,7 @@ import POINTS_OF_INTEREST from './pointsOfInterest.json';
 export const theme = createTheme({
   typography: {
     fontFamily: [
-      '-apple-system',
-      'BlinkMacSystemFont',
-      '"Segoe UI"',
-      'Roboto',
-      '"Helvetica Neue"',
-      'Arial',
-      'sans-serif',
-      '"Apple Color Emoji"',
-      '"Segoe UI Emoji"',
-      '"Segoe UI Symbol"',
+      'Square Peg',
     ].join(','),
     fontSize: 12,
   },
