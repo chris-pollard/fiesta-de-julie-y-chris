@@ -2,7 +2,7 @@
   "scripts": {
     "start": "webpack-dev-server --progress --hot --open",
     "start-local": "webpack-dev-server --env local --progress --hot --open",
-    "build": "webpack"
+    "build": "webpack --mode production"
   },
   "dependencies": {
     "@emotion/react": "^11.8.2",

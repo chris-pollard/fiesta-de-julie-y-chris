@@ -6,58 +6,108 @@ const { resolve } = require('path');
 const webpack = require('webpack');
 const Dotenv = require('dotenv-webpack');
 
-const config = {
-  mode: 'development',
+const config = [
+  {
+    mode: 'development',
 
-  devServer: {
-    static: '.',
-  },
+    devServer: {
+      static: '.',
+    },
 
-  entry: {
-    app: resolve('./src/app'),
-  },
+    entry: {
+      app: resolve('./src/app'),
+    },
+    performance: { hints: false },
+    output: {
+      library: 'App',
+    },
 
-  output: {
-    library: 'App',
-  },
+    resolve: {
+      extensions: ['.ts', '.tsx', '.js', '.json'],
+    },
 
-  resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.json'],
-  },
-
-  module: {
-    rules: [
-      {
-        test: /\.(sa|sc|c)ss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
-      },
-      {
-        test: /\.(woff|woff2|ttf|eot)$/,
-        use: 'file-loader',
-      },
-      {
-        test: /\.(ts|js)x?$/,
-        include: [resolve('.')],
-        exclude: [/node_modules/],
-        use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              presets: ['@babel/env', '@babel/react'],
+    module: {
+      rules: [
+        {
+          test: /\.(sa|sc|c)ss$/,
+          use: ['style-loader', 'css-loader', 'sass-loader'],
+        },
+        {
+          test: /\.(woff|woff2|ttf|eot)$/,
+          use: 'file-loader',
+        },
+        {
+          test: /\.(ts|js)x?$/,
+          include: [resolve('.')],
+          exclude: [/node_modules/],
+          use: [
+            {
+              loader: 'babel-loader',
+              options: {
+                presets: ['@babel/env', '@babel/react'],
+              },
             },
-          },
-          {
-            loader: 'ts-loader',
-          },
-        ],
-      },
+            {
+              loader: 'ts-loader',
+            },
+          ],
+        },
 
-    ],
+      ],
+    },
+    plugins: [new Dotenv()],
   },
+  {
+    mode: 'production',
+    performance: { hints: false },
+    devServer: {
+      static: '.',
+    },
 
-  // Optional: Enables reading mapbox token from environment variable
-  plugins: [new webpack.EnvironmentPlugin({ MapboxAccessToken: '' }), new Dotenv()],
-};
+    entry: {
+      app: resolve('./src/app'),
+    },
+
+    output: {
+      library: 'App',
+    },
+
+    resolve: {
+      extensions: ['.ts', '.tsx', '.js', '.json'],
+    },
+
+    module: {
+      rules: [
+        {
+          test: /\.(sa|sc|c)ss$/,
+          use: ['style-loader', 'css-loader', 'sass-loader'],
+        },
+        {
+          test: /\.(woff|woff2|ttf|eot)$/,
+          use: 'file-loader',
+        },
+        {
+          test: /\.(ts|js)x?$/,
+          include: [resolve('.')],
+          exclude: [/node_modules/],
+          use: [
+            {
+              loader: 'babel-loader',
+              options: {
+                presets: ['@babel/env', '@babel/react'],
+              },
+            },
+            {
+              loader: 'ts-loader',
+            },
+          ],
+        },
+
+      ],
+    },
+    plugins: [new Dotenv()],
+  },
+];
 
 // Enables bundling against src in this repo rather than the installed version
-module.exports = (env) => (env && env.local ? require('../webpack.config.local')(config)(env) : config);
+module.exports = (env) => (env && env.local ? config[0] : config[1]);
