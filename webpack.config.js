@@ -28,6 +28,14 @@ const config = {
   module: {
     rules: [
       {
+        test: /\.(sa|sc|c)ss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+      {
+        test: /\.(woff|woff2|ttf|eot)$/,
+        use: 'file-loader',
+      },
+      {
         test: /\.(ts|js)x?$/,
         include: [resolve('.')],
         exclude: [/node_modules/],
@@ -43,11 +51,7 @@ const config = {
           },
         ],
       },
-      {
-        test: /\.(woff|woff2|eot|ttf|svg)$/,
-        loader: 'file-loader',
-        options: { name: '[name].[ext]', outputPath: 'fonts/' },
-      },
+
     ],
   },
 

@@ -1,4 +1,4 @@
-import 'fontsource-roboto';
+import '@fontsource/roboto';
 import * as React from 'react';
 import { useState, useMemo } from 'react';
 import { render } from 'react-dom';
