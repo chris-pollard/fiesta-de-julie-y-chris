@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "webpack-dev-server --progress --hot --open --config webpack.dev.js",
-    "build": "webpack --display-error-details --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js"
   },
   "dependencies": {
     "@emotion/react": "^11.8.2",
