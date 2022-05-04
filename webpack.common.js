@@ -2,7 +2,7 @@ const { resolve } = require('path');
 
 module.exports = {
   entry: {
-    app: resolve('./src/app'),
+    app: resolve('./src/App'),
   },
   performance: { hints: false },
   output: {
