@@ -7,10 +7,10 @@ module.exports = merge(common, {
   devServer: {
     static: '.',
   },
-  module: {
-    plugins: [new Dotenv({
-      path: './.env',
-      safe: true,
-    })],
-  },
+
+  plugins: [new Dotenv({
+    path: './.env',
+    safe: true,
+  })],
+
 });
