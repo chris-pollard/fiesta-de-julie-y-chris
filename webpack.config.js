@@ -55,14 +55,14 @@ const config = [
 
       ],
     },
-    plugins: [new Dotenv()],
+    plugins: [new Dotenv({
+      path: './.env',
+      safe: true,
+    })],
   },
   {
     mode: 'production',
     performance: { hints: false },
-    devServer: {
-      static: '.',
-    },
 
     entry: {
       app: resolve('./src/app'),
@@ -105,9 +105,9 @@ const config = [
 
       ],
     },
-    plugins: [new Dotenv()],
+    plugins: [new webpack.EnvironmentPlugin(['MAPBOX_TOKEN'])],
   },
 ];
 
 // Enables bundling against src in this repo rather than the installed version
-module.exports = (env) => (env && env.local ? config[0] : config[1]);
+module.exports = () => (process.env.NODE_ENV === 'production' ? config[1] : config[0]);
