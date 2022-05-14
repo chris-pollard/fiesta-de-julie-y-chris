@@ -35,6 +35,7 @@ export const theme = createTheme({
 });
 
 const { MAPBOX_TOKEN } = process.env;
+console.log(MAPBOX_TOKEN);
 
 export default function App() {
   const [popupInfo, setPopupInfo] = useState(null);
