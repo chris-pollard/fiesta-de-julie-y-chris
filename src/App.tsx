@@ -1,5 +1,3 @@
-import '@fontsource/roboto';
-import '@fontsource/square-peg';
 import * as React from 'react';
 import { useState, useMemo } from 'react';
 import { render } from 'react-dom';
@@ -19,10 +17,18 @@ import POINTS_OF_INTEREST from './pointsOfInterest.json';
 
 export const theme = createTheme({
   typography: {
-    fontFamily: [
-      'Square Peg',
-    ].join(','),
+    fontFamily: 'Square Peg',
     fontSize: 12,
+    body1: {
+      fontFamily: 'Roboto',
+      marginBottom: '1rem',
+    },
+    button: {
+      fontFamily: 'Roboto',
+    },
+    h2: {
+      marginTop: '2rem',
+    },
   },
   palette: {
     primary: {
@@ -35,7 +41,6 @@ export const theme = createTheme({
 });
 
 const { MAPBOX_TOKEN } = process.env;
-console.log(MAPBOX_TOKEN);
 
 export default function App() {
   const [popupInfo, setPopupInfo] = useState(null);
@@ -75,9 +80,9 @@ export default function App() {
       <MapProvider>
         <Map
           initialViewState={{
-            latitude: 39.95943934708656,
-            longitude: 4.1503385399740695,
-            zoom: 10,
+            latitude: isMobile ? 39.96 : 39.95943934708656,
+            longitude: isMobile ? 4.14 : 4.1503385399740695,
+            zoom: isMobile ? 13 : 10,
             bearing: 0,
             pitch: 0,
           }}
@@ -86,11 +91,16 @@ export default function App() {
           minZoom={6}
           maxZoom={15}
         >
-
-          <NavigationControl
-            position="top-left"
-            showCompass={false}
-          />
+          {
+            isMobile
+              ? ''
+              : (
+                <NavigationControl
+                  position="top-left"
+                  showCompass={false}
+                />
+              )
+          }
 
           { isMobile
             ? ''
