@@ -10,6 +10,7 @@ import Map, {
 } from 'react-map-gl';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { isMobile } from 'react-device-detect';
+import CssBaseline from '@mui/material/CssBaseline';
 import Legend from './Legend';
 import ControlPanel from './ControlPanel';
 import Pin from './Pin';
@@ -18,7 +19,6 @@ import POINTS_OF_INTEREST from './pointsOfInterest.json';
 export const theme = createTheme({
   typography: {
     fontFamily: 'Square Peg',
-    fontSize: 12,
     body1: {
       fontFamily: 'Roboto',
       marginBottom: '1rem',
@@ -76,7 +76,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-
+      <CssBaseline />
       <MapProvider>
         <Map
           initialViewState={{

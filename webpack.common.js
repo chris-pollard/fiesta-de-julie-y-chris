@@ -7,6 +7,7 @@ module.exports = {
   performance: { hints: false },
   output: {
     library: 'App',
+    clean: true,
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json'],
