@@ -18,7 +18,7 @@ const desktopStyle = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: isMobile ? '90%' : 500,
+  width: isMobile ? '90%' : '60%',
   p: 4,
   height: isMobile ? '90%' : '75%',
   bgcolor: 'rgb(255, 255, 255,0.95)',
@@ -71,7 +71,7 @@ function ControlPanel() {
       { isMobile
         ? (
           <div style={{ display: 'flex', paddingTop: 20, justifyContent: 'space-between' }}>
-            <Typography variant={isMobile ? 'h2' : 'h1'} gutterBottom={!!expanded}>
+            <Typography variant={isMobile ? 'h2' : 'h1'}>
               ¡Hola!
             </Typography>
             { expanded
@@ -81,7 +81,7 @@ function ControlPanel() {
           </div>
         )
         : (
-          <Typography variant={isMobile ? 'h2' : 'h1'} gutterBottom={!!expanded}>
+          <Typography variant={isMobile ? 'h2' : 'h1'}>
             ¡Hola!
           </Typography>
         )}
