@@ -7,15 +7,16 @@ import Box from '@mui/material/Box';
 import InfoIcon from '@mui/icons-material/Info';
 import Typography from '@mui/material/Typography';
 import { useState } from 'react';
+import { isMobile } from 'react-device-detect';
 
 const style = {
   position: 'absolute' as 'absolute',
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 500,
+  width: isMobile ? '90%' : 500,
   p: 4,
-  height: '75%',
+  height: isMobile ? '90%' : '75%',
   bgcolor: 'rgb(255, 255, 255,0.95)',
   border: 'thick double #e91e63',
   borderRadius: 2,
@@ -50,6 +51,13 @@ function ControlPanel() {
       </Button>
       <Modal open={open} onClose={handleClose}>
         <Box sx={style}>
+          { isMobile
+            ? (
+              <div style={{ display: 'flex', paddingTop: 20, justifyContent: 'flex-end' }}>
+                <Button onClick={handleClose} variant="contained">Close</Button>
+              </div>
+            )
+            : ''}
           <Typography variant="h1" gutterBottom>Fiesta De Julie y Chris</Typography>
           <Typography variant="body1">
             We are so excited that you can join us in Menorca in September. It's been a long time coming for us, and we know it's a big journey for some of you. We'll do our best to make it special for all of us.

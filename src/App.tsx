@@ -80,8 +80,8 @@ export default function App() {
       <MapProvider>
         <Map
           initialViewState={{
-            latitude: isMobile ? 39.96 : 39.95943934708656,
-            longitude: isMobile ? 4.14 : 4.1503385399740695,
+            latitude: isMobile ? 40.05 : 39.95943934708656,
+            longitude: isMobile ? 4.1 : 4.1503385399740695,
             zoom: isMobile ? 13 : 10,
             bearing: 0,
             pitch: 0,
@@ -147,7 +147,7 @@ export default function App() {
           )}
         </Map>
         <ControlPanel />
-        <Legend setFilterOn={setFilterOn} />
+        <Legend filterOn={filterOn} setFilterOn={setFilterOn} isMobile={isMobile} />
       </MapProvider>
     </ThemeProvider>
   );
