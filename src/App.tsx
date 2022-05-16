@@ -26,8 +26,8 @@ export const theme = createTheme({
     button: {
       fontFamily: 'Roboto',
     },
-    h2: {
-      marginTop: '2rem',
+    h3: {
+      marginTop: isMobile ? '1rem' : '2rem',
     },
   },
   palette: {
@@ -80,7 +80,7 @@ export default function App() {
       <MapProvider>
         <Map
           initialViewState={{
-            latitude: isMobile ? 40.05 : 39.95943934708656,
+            latitude: isMobile ? 40.06 : 39.95943934708656,
             longitude: isMobile ? 4.1 : 4.1503385399740695,
             zoom: isMobile ? 13 : 10,
             bearing: 0,
@@ -89,7 +89,7 @@ export default function App() {
           mapStyle="mapbox://styles/mapbox/streets-v11"
           mapboxAccessToken={MAPBOX_TOKEN}
           minZoom={6}
-          maxZoom={15}
+          maxZoom={isMobile ? 17 : 15}
         >
           {
             isMobile
