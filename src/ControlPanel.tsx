@@ -47,7 +47,7 @@ const mobileStyle = {
 
 function ControlPanel() {
   const [open, setOpen] = useState(false);
-  const [expanded, setExpanded] = useState(true);
+  const [expanded, setExpanded] = useState(false);
 
   const handleOpen = () => {
     setOpen(true);
