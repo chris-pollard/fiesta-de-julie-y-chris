@@ -32,10 +32,10 @@ export const theme = createTheme({
   },
   palette: {
     primary: {
-      main: '#e91e63',
+      main: '#f06292',
     },
     secondary: {
-      main: '#007bb2',
+      main: '#00838f',
     },
   },
 });

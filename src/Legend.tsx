@@ -14,10 +14,11 @@ const style = {
   transform: 'translate(-50%, 0%)',
   width: '90%',
   p: 2,
-  bgcolor: 'rgb(255, 255, 255,0.95)',
+  bgcolor: '#dcd5bf',
   border: 'thick double #e91e63',
   borderRadius: 2,
   boxShadow: 24,
+  color: '#141001',
 };
 
 function Legend({ setFilterOn, isMobile, filterOn }) {
