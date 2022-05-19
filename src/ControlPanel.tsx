@@ -115,7 +115,7 @@ function ControlPanel() {
                 </div>
               )
               : ''}
-            <Typography variant="h3" gutterBottom>Fiesta de Julie y Chris</Typography>
+            <Typography variant="h2" gutterBottom>Fiesta de Jules y Chris</Typography>
             <Typography variant="body1">
               We are so excited that you can join us in Menorca in September. It's been a long time coming for us, and we know it's a big journey for some of you. We'll do our best to make it special for all of us.
             </Typography>

@@ -11,10 +11,13 @@ import Map, {
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { isMobile } from 'react-device-detect';
 import CssBaseline from '@mui/material/CssBaseline';
+import Chip from '@mui/material/Chip';
+import Typography from '@mui/material/Typography';
 import Legend from './Legend';
 import ControlPanel from './ControlPanel';
 import Pin from './Pin';
 import POINTS_OF_INTEREST from './pointsOfInterest.json';
+import Airport from './assets/airport.jpeg';
 
 export const theme = createTheme({
   typography: {
@@ -39,6 +42,8 @@ export const theme = createTheme({
     },
   },
 });
+
+const popupImages = [Airport];
 
 const { MAPBOX_TOKEN } = process.env;
 
@@ -80,7 +85,7 @@ export default function App() {
       <MapProvider>
         <Map
           initialViewState={{
-            latitude: isMobile ? 40.06 : 39.95943934708656,
+            latitude: isMobile ? 40.06 : 40,
             longitude: isMobile ? 4.1 : 4.1503385399740695,
             zoom: isMobile ? 13 : 10,
             bearing: 0,
@@ -129,18 +134,28 @@ export default function App() {
               onClose={() => setPopupInfo(null)}
               closeOnClick={false}
             >
-              <h3>
+              <Typography variant="h4">
                 {popupInfo.name}
-              </h3>
-              <div>
-                {popupInfo.region}
-              </div>
-              <div>
-                {popupInfo.type}
-              </div>
+              </Typography>
+              {
+                popupInfo.website
+                  ? (
+                    <Chip
+                      color="secondary"
+                      label="website"
+                      component="a"
+                      href={popupInfo.website}
+                      variant="outlined"
+                      clickable
+                      sx={{ fontFamily: 'Roboto' }}
+                    />
+                  )
+                  : ''
+              }
+
               <img
                 width="100%"
-                src={popupInfo.image}
+                src={popupImages[popupInfo.image]}
                 alt={popupInfo.name}
               />
             </Popup>
