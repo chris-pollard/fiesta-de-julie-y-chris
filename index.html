@@ -51,6 +51,13 @@
         color: #6b6b76;
         outline: none;
       }
+
+      .mapboxgl-popup-close-button {
+        padding: 10px;
+        font-size: 2rem;
+        color: #00838f;
+        outline: none;
+      }
       @media only screen and (max-width: 600px) {
         .control-panel {
           position: absolute;
@@ -71,7 +78,7 @@
   </head>
   <body>
     <div id="map"></div>
-    <script src='app.js'></script>
+    <script src='dist/app.js'></script>
   </body>
   <script type="text/javascript">
     App.renderToDom(document.getElementById('map'));

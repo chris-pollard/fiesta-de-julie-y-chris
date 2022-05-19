@@ -18,6 +18,21 @@ import ControlPanel from './ControlPanel';
 import Pin from './Pin';
 import POINTS_OF_INTEREST from './pointsOfInterest.json';
 import Airport from './assets/airport.jpeg';
+import SantaTeresa from './assets/santa_teresa.jpeg';
+import Platjes from './assets/platjes.jpeg';
+import CiutadellaPort from './assets/port.jpeg';
+import BinidaliBeachBar from './assets/binidali_beach_bar.jpeg';
+import Chiringuito from './assets/chiringuito.jpeg';
+import CalaMitjana from './assets/cala_mitjana.png';
+import Lighthouse from './assets/lighthouse.png';
+import HotelJeni from './assets/jeni.png';
+import Xoroi from './assets/xoroi.png';
+import SaBlanca from './assets/sablanca.jpeg';
+import Yacht from './assets/yacht.jpeg';
+import HotelMercadel from './assets/mercadel.jpeg';
+import HotelM27 from './assets/m27.jpeg';
+import HotelCarema from './assets/carema.jpeg';
+import HotelTirant from './assets/tirant.jpeg';
 
 export const theme = createTheme({
   typography: {
@@ -43,7 +58,9 @@ export const theme = createTheme({
   },
 });
 
-const popupImages = [Airport];
+const popupImages = [
+  SantaTeresa, Platjes, Airport, CiutadellaPort, BinidaliBeachBar, Chiringuito, CalaMitjana, Lighthouse, HotelJeni, Xoroi, SaBlanca, Yacht, HotelMercadel, HotelM27, HotelCarema, HotelTirant,
+];
 
 const { MAPBOX_TOKEN } = process.env;
 
@@ -85,9 +102,9 @@ export default function App() {
       <MapProvider>
         <Map
           initialViewState={{
-            latitude: isMobile ? 40.06 : 40,
-            longitude: isMobile ? 4.1 : 4.1503385399740695,
-            zoom: isMobile ? 13 : 10,
+            latitude: isMobile ? 39.9 : 40,
+            longitude: isMobile ? 4.05 : 4.1503385399740695,
+            zoom: isMobile ? 9 : 10,
             bearing: 0,
             pitch: 0,
           }}
@@ -133,9 +150,14 @@ export default function App() {
               latitude={Number(popupInfo.latitude)}
               onClose={() => setPopupInfo(null)}
               closeOnClick={false}
+              anchor="center"
+              style={{ borderRadius: 5 }}
             >
               <Typography variant="h4">
                 {popupInfo.name}
+              </Typography>
+              <Typography variant="body1">
+                {popupInfo.type}
               </Typography>
               {
                 popupInfo.website
@@ -147,7 +169,9 @@ export default function App() {
                       href={popupInfo.website}
                       variant="outlined"
                       clickable
-                      sx={{ fontFamily: 'Roboto' }}
+                      sx={{ fontFamily: 'Roboto', marginBottom: '0.5rem' }}
+                      target="_blank"
+                      rel="noopener"
                     />
                   )
                   : ''

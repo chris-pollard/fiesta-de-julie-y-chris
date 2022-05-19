@@ -4,7 +4,7 @@ import IconButton from '@mui/material/IconButton';
 
 function Pin({ onClick, pinType }: {onClick: () => void; pinType: string}) {
   return (
-    <IconButton onClick={onClick} size="large">
+    <IconButton onClick={onClick} size="small">
       <LocationOnIcon
         color={pinType === 'Wedding' ? 'primary' : 'secondary'}
         fontSize="large"

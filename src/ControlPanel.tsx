@@ -12,6 +12,8 @@ import Fade from '@mui/material/Fade';
 import ExpandLessRoundedIcon from '@mui/icons-material/ExpandLessRounded';
 import ExpandMoreRoundedIcon from '@mui/icons-material/ExpandMoreRounded';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
+import MenorcaPanorama from './assets/menorca_pano.jpeg';
+import Pano2 from './assets/pano2.png';
 
 const desktopStyle = {
   position: 'absolute' as 'absolute',
@@ -47,7 +49,7 @@ const mobileStyle = {
 
 function ControlPanel() {
   const [open, setOpen] = useState(false);
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(true);
 
   const handleOpen = () => {
     setOpen(true);
@@ -115,14 +117,14 @@ function ControlPanel() {
                 </div>
               )
               : ''}
-            <Typography variant="h2" gutterBottom>Fiesta de Jules y Chris</Typography>
+            <Typography variant={isMobile ? 'h3' : 'h2'} gutterBottom>Fiesta de Jules y Chris</Typography>
             <Typography variant="body1">
               We are so excited that you can join us in Menorca in September. It's been a long time coming for us, and we know it's a big journey for some of you. We'll do our best to make it special for all of us.
             </Typography>
             <img
-              src="https://crispy-wedding.s3.ap-southeast-2.amazonaws.com/menorca-boat-sml.jpeg"
-              alt=""
-              style={{ width: isMobile ? '100%' : 300 }}
+              src={MenorcaPanorama}
+              alt="Menorca Panorama"
+              style={{ width: '100%', borderRadius: 5 }}
             />
             <Typography variant="h3" gutterBottom>Naming ceremony</Typography>
             <Typography variant="body1">
@@ -131,8 +133,10 @@ function ControlPanel() {
             <Typography variant="h3" gutterBottom>Accomodation</Typography>
             <Typography variant="body1">
               Here is some text for an introduction. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum deserunt, provident quis atque quasi illo harum doloribus a, nemo non aliquam dolor eaque perferendis nostrum quisquam. Architecto animi nam esse!
+
+              For Hotel Tirant, there is an extra discount of the official rate during those days, you just email recep.tirant@trhhoteles.com with the subject 'JULIE&CHRIS EXTRA-5%'; you can use it as well for the meals.
             </Typography>
-            <ButtonGroup color="primary" fullWidth>
+            <ButtonGroup color="primary" variant="contained" fullWidth>
               <Button
                 href="https://www.tripadvisor.com.au/Tourism-g187464-Menorca_Balearic_Islands-Vacations.html"
                 target="_blank"
@@ -152,6 +156,11 @@ function ControlPanel() {
                 Booking.com
               </Button>
             </ButtonGroup>
+            <img
+              src={Pano2}
+              alt="Menorca Panorama"
+              style={{ width: '100%', marginTop: '2rem', borderRadius: 5 }}
+            />
             <Typography variant="h3" gutterBottom>Getting to the wedding</Typography>
             <Typography variant="body1">
               We recommend
