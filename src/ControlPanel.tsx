@@ -21,7 +21,7 @@ const desktopStyle = {
   left: '50%',
   transform: 'translate(-50%, -50%)',
   width: isMobile ? '90%' : '60%',
-  p: 4,
+  p: 8,
   height: isMobile ? '90%' : '75%',
   bgcolor: '#faf6eb',
   border: 'thick double #e91e63',
@@ -119,22 +119,26 @@ function ControlPanel() {
               : ''}
             <Typography variant={isMobile ? 'h3' : 'h2'} gutterBottom>Fiesta de Jules y Chris</Typography>
             <Typography variant="body1">
-              We are so excited that you can join us in Menorca in September. It's been a long time coming for us, and we know it's a big journey for some of you. We'll do our best to make it special for all of us.
+              We are so excited that you can join us in Menorca in September. It's been a long time coming for us, and we know it's a big journey for some of you. We'll do our best to make it special for all of us &#128149;.
             </Typography>
             <img
               src={MenorcaPanorama}
               alt="Menorca Panorama"
               style={{ width: '100%', borderRadius: 5 }}
             />
-            <Typography variant="h3" gutterBottom>Naming ceremony</Typography>
+            <Typography variant="h3" gutterBottom>Children</Typography>
             <Typography variant="body1">
-              Here is some text for an introduction. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum deserunt, provident quis atque quasi illo harum doloribus a, nemo non aliquam dolor eaque perferendis nostrum quisquam. Architecto animi nam esse!
+              Children are more than welcome! We will have Teo and also a little one that is on the way, and we'd love them to celebrate with other children and maybe make some new friends. We will be close to the house and we will have some babysitters there to support you during the day and evening. We will also be doing a little naming ceremony for both our children.
             </Typography>
             <Typography variant="h3" gutterBottom>Accomodation</Typography>
             <Typography variant="body1">
-              Here is some text for an introduction. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum deserunt, provident quis atque quasi illo harum doloribus a, nemo non aliquam dolor eaque perferendis nostrum quisquam. Architecto animi nam esse!
-
+              There are a number of options, some of which are on the map, but we recommend staying reasonably close to the ceremony, which is in the north of the island. Everywhere is only a maximum of 40 minutes away, so if you find a more remote place you love, go for it!
+            </Typography>
+            <Typography variant="body1">
               For Hotel Tirant, there is an extra discount of the official rate during those days, you just email recep.tirant@trhhoteles.com with the subject 'JULIE&CHRIS EXTRA-5%'; you can use it as well for the meals.
+            </Typography>
+            <Typography variant="body1">
+              Here are some popular websites below.
             </Typography>
             <ButtonGroup color="primary" variant="contained" fullWidth>
               <Button
@@ -163,15 +167,15 @@ function ControlPanel() {
             />
             <Typography variant="h3" gutterBottom>Getting to the wedding</Typography>
             <Typography variant="body1">
-              We recommend
+              There are taxis on the island, so your two main options are hiring a car and driving yourself, or catching a taxi.
             </Typography>
             <Typography variant="h3" gutterBottom>Dressing for the occasion</Typography>
             <Typography variant="body1">
-              We expect you to wear whatever you feel like. We are on an island and it will be warm, so think about things that flow, linen, nice open shoes. Not too formal.
+              We expect you to wear whatever you feel like. We are on an island and it will be warm, so think about something beachy with nice open shoes. Not too formal.
             </Typography>
             <Typography variant="h3" gutterBottom>Gifts</Typography>
             <Typography variant="body1">
-              The greatest gift is your presence, but if you would like to give us a gift, a contribution to our European trip and a couple of things on our wishlist would be much appreciated.
+              The greatest gift is your presence, but if you would like to give us a gift, a contribution to our European trip and you can do that through our little wishing well site.
             </Typography>
             <div style={{ display: 'flex', paddingTop: 20, justifyContent: 'flex-end' }}>
               <Button onClick={handleClose} variant="contained">Close</Button>

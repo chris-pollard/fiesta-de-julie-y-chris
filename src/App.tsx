@@ -102,8 +102,8 @@ export default function App() {
       <MapProvider>
         <Map
           initialViewState={{
-            latitude: isMobile ? 39.9 : 40,
-            longitude: isMobile ? 4.05 : 4.1503385399740695,
+            latitude: isMobile ? 39.9 : 39.97,
+            longitude: isMobile ? 4.05 : 4.19,
             zoom: isMobile ? 9 : 10,
             bearing: 0,
             pitch: 0,
