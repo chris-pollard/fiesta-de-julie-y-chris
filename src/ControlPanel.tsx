@@ -136,6 +136,9 @@ function ControlPanel() {
               Time: 12h30-midnight
               (check invite for date)
             </Typography>
+            <Typography variant="body1">
+              Holidays: We will be in Menorca for the week before and the week after the event, and would love to spend time with you.
+            </Typography>
             <Typography variant="h3" gutterBottom>Children</Typography>
             <Typography variant="body1">
               Children are more than welcome! We will have Teo and also a little one that is on the way, and we'd love them to celebrate with other children and maybe make some new friends. We will be mainly in the garden of a private house and are planning on accomodating a room for naps and rest time. We will have babysitters (depending on numbers and interest).
