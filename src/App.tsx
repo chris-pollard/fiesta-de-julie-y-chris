@@ -33,6 +33,10 @@ import HotelMercadel from './assets/mercadel.jpeg';
 import HotelM27 from './assets/m27.jpeg';
 import HotelCarema from './assets/carema.jpeg';
 import HotelTirant from './assets/tirant.jpeg';
+import PortMahon from './assets/portdemahon.jpeg';
+import Binidali from './assets/binidali.jpeg';
+import Pregonda from './assets/pregonda.jpeg';
+import Tortuga from './assets/tortuga.jpeg';
 
 export const theme = createTheme({
   typography: {
@@ -59,7 +63,26 @@ export const theme = createTheme({
 });
 
 const popupImages = [
-  SantaTeresa, Platjes, Airport, CiutadellaPort, BinidaliBeachBar, Chiringuito, CalaMitjana, Lighthouse, HotelJeni, Xoroi, SaBlanca, Yacht, HotelMercadel, HotelM27, HotelCarema, HotelTirant,
+  SantaTeresa,
+  Platjes,
+  Airport,
+  CiutadellaPort,
+  BinidaliBeachBar,
+  Chiringuito,
+  CalaMitjana,
+  Lighthouse,
+  HotelJeni,
+  Xoroi,
+  SaBlanca,
+  Yacht,
+  HotelMercadel,
+  HotelM27,
+  HotelCarema,
+  HotelTirant,
+  PortMahon,
+  Binidali,
+  Pregonda,
+  Tortuga,
 ];
 
 const { MAPBOX_TOKEN } = process.env;
@@ -151,7 +174,7 @@ export default function App() {
               onClose={() => setPopupInfo(null)}
               closeOnClick={false}
               anchor="center"
-              style={{ borderRadius: 5 }}
+              style={{ borderRadius: 15 }}
             >
               <Typography variant="h4">
                 {popupInfo.name}
